@@ -1,0 +1,137 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Frameset//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-frameset.dtd">
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>LOGIN</title>
+        <style>
+            body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(to bottom, #219dbca0, #ffffff);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            font-size: 1.0rem;
+            color: #fff; 
+        }
+        .login-container {
+            background-color: rgba(255, 255, 255, 0.8); 
+            border-radius: 10px;
+            padding: 20px;
+            width: 40%;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.3); 
+            color: #007185;
+        }
+        h1 {
+            color: #219dbca0;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        input[type=text], input[type=password] {
+            width: calc(100% - 22px);
+            padding: 8px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            margin-bottom: 10px;
+            font-size: 1.0rem;
+        }
+        button:hover {
+            background-color:  #007185;
+        }
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.05);
+            }
+            100% {
+                transform: scale(1);
+            }
+        }
+        .animated-button {
+            animation: pulse 1.5s infinite alternate;
+        }
+    </style>
+    </head>
+    <body>
+        <script>
+           
+            </script>
+        <form class="login-container" method="post" action="BothLoginValidate.jsp" onsubmit="return validateForm()">
+        
+            <h1>LOGIN</h1>
+                    
+                    <label for="username">User ID</label>
+                    <input type="text" name="uid" required>
+                     
+                      
+          
+                        <label for="password">Password</label>
+                        <input type="password" name="upass" required>
+                    
+                    
+<button style="background-color:  #007185;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 1.5rem;
+            cursor: pointer;
+            width: 100%;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;" class="btn animated-button" type="submit" class="animated-button">Login</button>
+</form>
+<script>
+        
+        function validateForm() {
+        // Retrieve form inputs
+        var username = document.getElementById('uid').value.trim();
+       
+        var upass = document.getElementById('upass').value.trim();
+        
+
+        // Validate input fields
+        if (!validateInput(uid, upass)) {
+            alert("Please correct the errors in the form.");
+            return false;
+        }
+
+        // Validation succeeded, allow form submission
+        return true;
+    }
+    
+    
+     function validateInput(uid, upass) {
+      
+        var usernamePattern = /^[a-zA-Z0-9._]{4,}$/;
+        var passwordPattern = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{10,}$/;
+
+       
+        if (!usernamePattern.test(uid)) {
+            alert("Username must be at least 4 characters long and can contain letters, digits, dots, and underscores.");
+            return false;
+        }
+        if (!passwordPattern.test(upass)) {
+            alert("Username must be at least 4 characters long and can contain letters, digits, dots, and underscores.");
+            return false;
+        }
+
+        // If all validations pass, return true
+        return true;
+    }
+   
+</script>
+                    </form>
+   
+              
+
+  
+    </body>
+</html>

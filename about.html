@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Command on Demand</title>
+  <link rel="stylesheet" href="us.css"> 
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: auto;
+       overflow: auto;
+    }
+
+    .footer {
+ position: absolute; /* or relative, depending on your layout needs */
+  top: 80%;
+  bottom: 0;
+  width: 100%;
+  background-color: #007185;
+  padding: 20px;
+  color: #fff;
+}
+    
+    
+    .slideshow-container {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+
+    .slideshow-container img {
+      display: none;
+      width: 100%;
+      height: auto;
+    }
+
+    .content-box {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(to bottom, rgba(33, 157, 188, 0.5), rgba(255, 255, 255, 0.5));
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .hero {
+      text-align: center;
+      color: #023047;
+      max-width: 600px;
+      padding: 20px;
+    }
+
+    .hero h2 {
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+      white-space: nowrap; 
+      color: white;
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+      line-height: 1.6;
+    }
+  </style>
+</head>
+<body>
+  <div class="slideshow-container">
+    <img class="mySlides" src="zelectrician.png">
+    <img class="mySlides" src="zhome-cleaning.png">
+    <img class="mySlides" src="zmechanic.png">
+    <img class="mySlides" src="zplumber.png">
+    <img class="mySlides" src="ztailor.png">
+  </div>
+
+  <div class="content-box">
+    <section class="hero">
+      <h2>Welcome to Command on Demand</h2>
+      <p>Get super fast services & repairs at home. Connect with trusted service providers near you. Book your needed services online and get them done hassle-free!</p>
+    </section>
+      <footer class="footer" style="background-color: #007185; height: 350px;">
+        <div class="footer-container" style="display: flex; flex-wrap: wrap; justify-content: space-between;">
+            
+            <div style="flex-basis: 100%;">
+                <div style="display: flex; align-items: center;">
+                    <img src="zcod-logo.png" alt="Command On Demand" style="max-width: 50px; margin-right: 10px;">
+                    <h3 style="font-size: 16px; margin-bottom: 10px; margin-top: 8px;">Command On Demand</h3>
+            </div>
+            <br><br>
+            </div>
+            <div style="flex-basis: calc(33.33% - 20px); margin-bottom: 20px;">
+                <h3 style="font-size: 16px; margin-bottom: 10px; margin-top: 0;">Utility Links</h3>
+                <ul style="list-style-type: none; padding: 0;">
+                    <li><a href="#" style="color: #fff; text-decoration: none;">Terms of Service</a></li>
+                    <li><a href="#" style="color: #fff; text-decoration: none;">Privacy Policy</a></li>
+                    <li><a href="#" style="color: #fff; text-decoration: none;">FAQs</a></li>
+                </ul>
+            </div>
+    
+            
+            <div style="flex-basis: calc(33.33% - 20px); margin-bottom: 20px;">
+                <h3 style="font-size: 16px; margin-bottom: 10px; margin-top: 0;">Doormat Navigation</h3>
+                <ul style="list-style-type: none; padding: 0;">
+                    <li><a href="#" style="color: #fff; text-decoration: none;">Home</a></li>
+                    <li><a href="about.html" style="color: #fff; text-decoration: none;">About Us</a></li>
+                    <li><a href="#" style="color: #fff; text-decoration: none;">Services</a></li>
+                    <li><a href="#" style="color: #fff; text-decoration: none;">Contact Us</a></li>
+                </ul>
+            </div>
+    
+            
+            <div style="flex-basis: calc(33.33% - 20px); margin-bottom: 20px;">
+                <h3 style="font-size: 16px; margin-bottom: 10px; margin-top: 0;">Secondary Task Links</h3>
+                <ul style="list-style-type: none; padding: 0;">
+                    <li><a href="login.html" style="color: #fff; text-decoration: none;">Login</a></li>
+                    <li><a href="signup.html" style="color: #fff; text-decoration: none;">Sign Up</a></li>
+                </ul>
+            </div>
+            
+            <div class="email-signup-form" style="flex-basis: calc(33.33% - 20px); margin-bottom: 20px;">
+                <h3 style="font-size: 16px; margin-bottom: 10px; margin-top: 0;">Subscribe to Our Newsletter</h3>
+                <form action="#" method="post" style="margin-top: 10px;">
+                    <input type="email" name="email" placeholder="Enter your email" style="padding: 8px; width: 200px; margin-right: 10px;">
+                    <button type="submit" style="padding: 8px 20px; background-color: #023047; color: #fff; border: none; border-radius: 5px; cursor: pointer;">Subscribe</button>
+                </form>
+            </div>
+    
+            
+            <div style="flex-basis: 100%; text-align: center;">
+                <p style="margin-top: 0;">&copy; 2024 Command On Demand. All rights reserved.</p>
+            </div>
+    
+        </div>
+    </footer>
+  </div>
+
+  <script>
+    var slideIndex = 0;
+    carousel();
+
+    function carousel() {
+      var i;
+      var slides = document.getElementsByClassName("mySlides");
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+      }
+      slideIndex++;
+      if (slideIndex > slides.length) {slideIndex = 1}
+      slides[slideIndex-1].style.display = "block";
+      setTimeout(carousel, 1500); 
+    }
+  </script>
+</body>
+</html>
+
+
+
+

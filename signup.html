@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Frameset//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-frameset.dtd">
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>SIGNUP</title>
+        <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(to bottom, #219dbca0, #ffffff);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            font-size: 1.0rem;
+            color: #fff; 
+        }
+        .signup-container {
+            background-color: rgba(255, 255, 255, 0.8); 
+            border-radius: 10px;
+            padding: 20px;
+            width: 100%;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.3); 
+            color:  #007185;
+            overflow-y: auto; 
+        }
+        h1 {
+            color: #007185;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        .input-group {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 10px; 
+        }
+        .input-group label {
+            width: 40%;
+        }
+        .input-group input, .input-group select {
+            width: 45%;
+        }
+        button {
+            background-color: #007185;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 1.5rem;
+            cursor: pointer;
+            width: 100%;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+        input[type=submit]:hover {
+            background-color:  #007185;
+        }
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.05);
+            }
+            100% {
+                transform: scale(1);
+            }
+        }
+        .animated-button {
+            animation: pulse 1.5s infinite alternate;
+        }
+        </style>
+    </head>
+   <body>
+    <center>
+        <form id="signupForm" method="post" action="signup.jsp" onsubmit="return validateForm()">
+            <div class="signup-container">
+                <h1>SIGNUP</h1>
+                <div class="input-group">
+                     <label>First Name</label>
+    <input type="text" id="username" name="username" pattern="[A-Za-z]{1,32}" title="Please enter letters only (max 32 characters)" required />
+
+                </div>
+                
+                <div class="input-group">
+                    <label>Last Name</label>
+                    <input type="text" id="lastname" pattern="[A-Za-z]{1,32}" title="Please enter letters only (max 32 characters)" name="lastname" />
+                </div>
+                <div class="input-group">
+                    <label>Phone Number</label>
+                    <input type="tel" id="phone" name="phone" pattern="[0-9]{10}" title="Please enter a valid 10-digit phone number" required />
+                </div>
+                <div class="input-group">
+                    <label>User ID</label>
+                    <input type="text" id="uid" name="uid" pattern="[a-zA-Z0-9._]{6,10}" title="Username must be at least 6 and at max 10 characters long and can contain letters, digits, dots, and underscores." required />
+                </div>
+                <div class="input-group">
+    <label>Password</label>         
+    <input type="password" id="upass" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$#^!%*?&]{6,10}$" title="Password must be at least 6 and at max 10 characters long containing at least one lowercase letter, one uppercase letter, one digit, and one special character" required name="upass" />
+                </div>
+
+
+
+                <div class="input-group">
+                    <label>E-Mail</label>
+                    <input type="email" id="email" pattern="[^\s@]+@banasthali\.in" title="Please enter a valid Banasthali email address" required name="email" />
+                </div>
+                <div class="input-group">
+                    <label>Address</label>
+                    <input type="text" id="address" name="address" required/>
+                </div>
+<!--                <button type="button" class="animated-button" onclick="validateInput()">Signup</button>-->
+                    <button type="submit" class="animated-button">Signup</button>
+            </div>
+        </form>
+    </center>
+
+</body>
+</html>
+</body>
+</html>

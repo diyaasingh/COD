@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Book Electrician</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(to bottom,  #219dbca0, #007185);
+            color: #000; /* Changed text color to black */
+        }
+
+        h1 {
+            font-size: 2rem;
+            padding: 10px 20px;
+            margin-top: 20px;
+            background: linear-gradient(to bottom,  #219dbca0, #007185);
+            color: white;
+            text-align: center;
+            border-radius: 5px;
+        }
+
+        fieldset {
+            width: 800px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            margin: 20px auto;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        fieldset:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        button {
+            background-color:  #023047;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 1.2rem;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color:  #219dbca0;
+        }
+
+        textarea {
+            width: 100%;
+            height: 100px;
+            resize: none;
+            padding: 5px;
+            font-size: 1rem;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        h3{
+            color: #219dbca0;
+            text-align: left;
+        }
+        h1{
+            color: white;
+        }
+        input[type="date"] {
+            width: 50%;
+            text-align: left;
+            padding: 5px;
+            font-size: 1rem;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box; 
+        }
+        fieldset.date-field {
+            text-align: left;
+        }
+
+        .thank-you-box {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(255, 255, 255, 0.8); 
+            z-index: 999;
+        }
+
+        .thank-you-content {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: linear-gradient(to bottom, #219dbca0, #007185); /* Gradient background */
+            color: #fff; /* White text */
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+        }
+
+        .close-button {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+<center>
+    <h1>
+        Book Electrician Now
+    </h1>
+
+    <form id="electricianForm" action="booking" method="post" onsubmit="return validateForm()">
+        <fieldset>
+            <h3>SERVICE PROVIDER</h3>
+            <p>Name-</p>
+            <p>Information</p>
+        </fieldset>
+        <br>
+        <fieldset>
+            <h3>Your Address</h3>
+            <label for="address"></label>
+            <textarea id="address" placeholder="Enter your address"></textarea>
+            <br><br>
+        </fieldset>
+        <br>
+        <fieldset class="date-field">
+            <h3>DATE</h3>
+            <label for="date"></label>
+            <input type="date" id="date" required/>
+            <br><br>
+        </fieldset>
+        <br>
+        <fieldset>
+            <label for="service-selected">Service you have selected</label>
+            <input type="text" id="service-selected" required/>
+            <br><br>
+            <label for="service-price">Minimum Fee</label>
+            <input type="text" id="service-price" required/>
+            <br>
+            <h5>*payment to be done directly to the service provider </h5>
+        </fieldset>
+        <br><br>
+        <center>
+            <button type="submit">Confirm Now</button>
+        </center>
+    </form>
+</center>
+
+<div class="thank-you-box" id="thankYouBox">
+    <div class="thank-you-content">
+        <span class="close-button" onclick="closeThankYouBox()">&times;</span>
+        <h2>Thank You for Booking!</h2>
+        <p>Your booking information has been sent to the service provider .</p>
+    </div>
+</div>
+
+<script>
+    function validateForm() {
+        var address = document.getElementById("address").value;
+        var date = document.getElementById("date").value;
+        if (address === "" || date === "") {
+            alert("Please fill in all required fields.");
+            return false;
+        }
+        return true;
+    }
+
+    function closeThankYouBox() {
+        document.getElementById("thankYouBox").style.display = "none";
+    }
+
+    document.getElementById("electricianForm").addEventListener("submit", function(event) {
+        event.preventDefault();
+        var isValid = validateForm();
+        if (isValid) {
+            document.getElementById("thankYouBox").style.display = "block";
+        }
+    });
+
+    var today = new Date().toISOString().split('T')[0];
+    document.getElementById("date").setAttribute("min", today);
+</script>
+</body>
+</html>
+

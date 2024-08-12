@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+    <head>
+       
+    </head>
+<!--    <body>
+        <div class="main1">
+            <div class="main1-1">
+                
+                <div class="main1-1-1">
+
+                </div>
+            </div>
+            <div class="main1-2">
+                
+            </div>
+        </div>
+    </body>-->
+    <body style="
+                background-image: linear-gradient(90deg, #D9AFD9 0%, #97D9E1 100%);
+                height: 100%;
+                margin: 0;
+                padding: 0;
+                background-position: center;
+                background-size: cover;
+                font-family: serif;
+                ">
+        <div class="area"  style=" font-size: 25px; text-align: center; background-color: white ; height: 500px; width: 50%;margin-left: 400px ; margin-top: 50px; padding: 20px 0px 15px; align-items: center; justify-content: center;">
+           
+            <div style="font-size: 40px;">Search Product</div>
+        <%
+            String pid = request.getParameter("pid");
+            
+            String pname="";
+            String pcat="";
+            String pprice="";
+            String pqty="";
+            if(pid != null){
+                PreparedStatement ps = new Conn().con.prepareStatement("SELECT  PNAME , PCATEGORY ,PPRICE,PQTY FROM PRODUCTTBL WHERE PID =?");
+                ps.setString(1,String.valueOf(pid));
+                ResultSet rs = ps.executeQuery();
+                if(rs.next()){
+                
+                    pname = rs.getString(1);
+                    pcat = rs.getString(2);
+                    pprice=rs.getString(3);
+                    pqty=rs.getString(4);
+                
+                }else{
+                    %>
+                    <script type="text/javascript">
+                        alert("Product does not exist");
+                    </script>
+                <%}
+            }
+               if(pid ==null) pid="";
+        %>
+        <br> <form action ="ProductSearch.jsp" method="POST">
+            <input class='input' type="text" placeholder="Product ID" name="pid" value="<%=pid%>" /><br><br>
+            <input class='input' type="text" placeholder="Product Name" name="pname" value="<%=pname%>" /><br><br>
+            <input class='input' type="text" placeholder="Product Category" name="pcategory" value="<%=pcat%>" /><br><br>
+            <input class='input' type="text" placeholder="Product Price" name="pprice" value="<%=pprice%>" /><br><br>
+            <input class='input' type="text" placeholder="Product Quantity" name="pqty" value="<%=pqty%>" /><br><br>
+            <input  class='btn' type="submit" value="Search" />
+        </form>
+        </div>
+    </body>
+
+
+</html>

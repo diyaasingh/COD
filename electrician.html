@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Electrician-Booking</title>
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                margin: 0;
+                padding: 0; 
+                color: #fff; 
+                background: linear-gradient(to bottom,  #219dbca0, #007185);
+            }
+    
+            h1 {
+                margin-bottom: 10px;
+            }
+    
+            .profiles {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center; 
+                gap: 20px; 
+            }
+    
+            .profile {
+                background-color: #fff; 
+                padding: 30px;
+                border-radius: 10px;
+                box-shadow: 0 0 10px rgba(00.3s, 00.3s, 00.3s, 0.0.3s);
+                text-align: left;
+                width: 90%;
+                cursor: pointer;
+                margin-bottom: 20px;
+                margin-left: 20px;
+                margin-right: 20px;
+                transition: transform 0.3s ease;
+            }
+    
+            .profile:hover {
+                transform: translateY(-5px);
+            }
+    
+            .profile-pic {
+                width: 100px;
+                height: 100px;
+                border-radius: 50%;
+                margin-bottom: 10px;
+            }
+    
+            .name {
+                font-weight: bold;
+                font-size: 1.2rem;
+                margin-bottom: 5px;
+                color: #007185; 
+                cursor: pointer;
+            }
+    
+            .details {
+                color: #666; 
+                margin-bottom: 10px;
+            }
+    
+            .book-now {
+                background-color: #007185; 
+                color: #fff;
+                border: none;
+                padding: 10px 20px;
+                font-size: 1rem;
+                cursor: pointer;
+                border-radius: 5px;
+                transition: background-color 0.3s ease;
+            }
+    
+            .book-now:hover {
+                background-color: #219dbca0; 
+            }
+            h1, h2 {
+            color: #fff; 
+            margin-bottom: 10px; 
+            animation: slideUp 0.5s ease; 
+            text-align: center;
+            padding: 20px;
+        }
+        @keyframes slideUp {
+            from {
+                transform: translateY(100px); 
+                opacity: 20; 
+            }
+            to {
+                transform: translateY(0); 
+                opacity: 1; 
+            }
+        }
+
+        h1 {
+            font-size: 2.5rem; 
+        }
+
+        h2 {
+            font-size: 1.8rem;
+            text-align: left;
+        }
+        a {
+    text-decoration: none;
+}     
+        </style>
+    </head>
+    <body>
+        <div class="container">
+        <center>
+            <h1>Pay after service | Super fast service</h1>
+            <h2>Electricians near me!</h2>
+        </center>
+<br>
+</div>
+        
+        
+            <div class="profile" >
+                <a href="service-provider-info.html" ><img src="user-icon.png" alt="Electrician Profile Picture" class="profile-pic"></a>
+                    <div class="info">
+                        <a href="service-provider-info.html">
+                        <div class="name" id="fname">Rakesh</div>
+                        <div class="details">Lorem ipsum dolor sit amet consectetur adipisicing</div>
+                    </a>
+                    </div><button class="book-now" onclick="window.location.href='book-electrician.jsp'">Book Now</button>
+                     <a href="book-electrician.jsp?name=Rakesh"><button class="book-now" onclick="window.location.href='sp-register.html'">Book Now</button></a>
+            </div>
+        
+            <div class="profile" >
+                    <a href="service-provider-info.html" ><img src="user-icon.png" alt="Electrician Profile Picture" class="profile-pic"></a>
+                    <div class="info">
+                        <a href="service-provider-info.html" >
+                            <div class="name">Suresh</div>
+                            <div class="details">Lorem ipsum dolor sit amet consectetur adipisicing</div>
+                        </a>
+                        </div>
+                    <a href="book-electrician.jsp?name=Suresh"><button class="book-now" onclick="window.location.href='book-electrician.jsp'">Book Now</button></a>
+            </div>
+        
+            <div class="profile" >
+                <a href="service-provider-info.html" ><img src="user-icon.png" alt="Electrician Profile Picture" class="profile-pic"></a>
+                <div class="info">
+                    <a href="service-provider-info.html" >
+                    <div class="name">Rahul Dua</div>
+                    <div class="details">Lorem ipsum dolor sit amet consectetur adipisicing</div>
+                </a>
+                </div>
+                
+                <button class="book-now" onclick="window.location.href='book-electrician.jsp'">Book Now</button>
+        </div>
+             <div class="profile" >
+                <a href="service-provider-info.html" ><img src="user-icon.png" alt="Electrician Profile Picture" class="profile-pic"></a>
+                <div class="info">
+                    <a href="service-provider-info.html" >
+                        <div class="name">Rahul Dua</div>
+                        <div class="details">Lorem ipsum dolor sit amet consectetur adipisicing</div>
+                    </a>
+                    </div>
+                <button class="book-now" onclick="window.location.href='book-electrician.html'">Book Now</button>
+        </div>
+        <div class="profile" >
+            <a href="service-provider-info.html" ><img src="user-icon.png" alt="Electrician Profile Picture" class="profile-pic"></a>
+            <div class="info">
+                <a href="service-provider-info.html" >
+                <div class="name">Rahul Dua</div>
+                <div class="details">Lorem ipsum dolor sit amet consectetur adipisicing</div>
+            </a>
+            </div>
+            <button class="book-now" onclick="window.location.href='book-electrician.html'">Book Now</button>
+    </div>
+         <div class="profile" >
+            <a href="service-provider-info.html" ><img src="user-icon.png" alt="Electrician Profile Picture" class="profile-pic"></a>
+            <div class="info">
+                <a href="service-provider-info.html" >
+                    <div class="name">Rahul Dua</div>
+                    <div class="details">Lorem ipsum dolor sit amet consectetur adipisicing</div>
+                </a>
+                </div>
+            <button class="book-now" onclick="window.location.href='book-electrician.html'">Book Now</button>
+    </div>
+            
+                
+            
+        
+    
+    </body>
+</html>
+
+
+
+       
+    </body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ <% 
+    String reviewsp = "";
+    String id = "";
+    try {                                               
+        PreparedStatement ps = con.prepareStatement("SELECT s.first_name as sp_name,s.sp_id FROM booking b JOIN usersignup u ON b.user_id = u.user_id JOIN sp s ON b.sp_id = s.sp_id WHERE b.user_id =?");
+        ps.setString(1, uid);
+        ResultSet rs1 = ps.executeQuery();
+        if (rs1.next()) {
+            reviewsp = rs1.getString(1);
+            id = rs1.getString(2);
+        }
+    } catch (Exception e) {
+        e.printStackTrace();
+    }
+    
+%>
+
+<%
+    String valueToCheck = reviewsp; // The value you want to check
+    String message = ""; // Initialize message variable
+
+    try {
+        
+        PreparedStatement ps = con.prepareStatement("SELECT COUNT(*) AS count_value FROM srating WHERE sp_id IN (SELECT s.sp_id FROM sp s WHERE s.first_name = ?)");
+        ps.setString(1, valueToCheck);
+        ResultSet sr = ps.executeQuery();
+
+        if (sr.next()) {
+            int count = sr.getInt("count_value");
+            if (count > 0) {
+                message = "Thanks for the rating";
+            } else {
+                message = "Please give rating";
+            }
+        }
+    } catch (SQLException e) {
+        e.printStackTrace();
+        // Handle SQLException
+        message = "An error occurred while checking the value.";
+    }
+    
+int ratingValue = 0;
+    PreparedStatement ps = con.prepareStatement("select rating from srating where sp_id in(SELECT s.sp_id FROM sp s WHERE s.first_name = ?)");
+    ps.setString(1,valueToCheck);
+    ResultSet sr = ps.executeQuery();
+    if(sr.next()){
+        ratingValue = sr.getInt("RATING") ;
+        System.out.println(ratingValue);
+    }
+%>
+    <div class="profile-container" id="ratingContainer" style="display: none;">
+        <h1>Rating</h1>
+        <div class="rating-item">
+            <label for="name">Service Provider:</label>
+            <input type="text" id="name" name="name" value="<%=reviewsp%>" readonly><br>
+            <div class="stars" onclick="rate(event)">
+                <span class="star" value="1" data-value="1">&#9733;</span>
+                <span class="star" value="2" data-value="2">&#9733;</span>
+                <span class="star" value="3" data-value="3">&#9733;</span>
+                <span class="star" value="4" data-value="4">&#9733;</span>
+                <span class="star" value="5" data-value="5">&#9733;</span>
+            </div>
+            <p><%= message %></p>
+            <input type="submit" class="submit-btn" onclick="redirectToRatingPage()" value="Submit Rating">
+        </div>
+    </div>
+
+let value = 0;
+        function rate(event) {
+            const stars = document.querySelectorAll('.star');
+            const target = event.target;
+            const value = parseInt(target.getAttribute('data-value'));
+
+            stars.forEach((star, index) => {
+                if (index < value) {
+                    star.classList.add('active');
+                } else {
+                    star.classList.remove('active');
+                }
+            });
+        }
+        function redirectToRatingPage() {
+        const reviewsp = "<%=reviewsp%>";
+        window.location.href = 'SsubmitRating.jsp?name=' + encodeURIComponent(reviewsp) + '&rating=' + encodeURIComponent(value);
+    }
+    
+    <script>
+    // Check if the URL contains the anchor ID
+    if (window.location.hash === "#rating") {
+        // Call the showAvailability() function
+        showRating();
+    }
+</script>
+
+
